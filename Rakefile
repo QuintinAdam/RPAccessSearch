@@ -5,7 +5,7 @@ require 'motion/project/template/ios'
 require 'bundler'
 Bundler.require
 
-# require 'bubble-wrap'
+require 'bubble-wrap'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings
@@ -47,7 +47,7 @@ Motion::Project::App.setup do |app|
     pod 'JMImageCache'
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
-  #   pod "FontasticIcons"
+    pod "FontasticIcons"
   end
 
   app.development do
@@ -71,5 +71,3 @@ Motion::Project::App.setup do |app|
   puts "Using certificate: #{app.codesign_certificate}"
 end
 
-# Remove this if you aren't using CDQ
-task :"build:simulator" => :"schema:build"
