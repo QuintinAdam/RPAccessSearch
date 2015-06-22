@@ -6,6 +6,7 @@ require 'bundler'
 Bundler.require
 
 Dotenv.load
+
 require 'bubble-wrap'
 require 'motion-map'
 
@@ -14,6 +15,22 @@ Motion::Project::App.setup do |app|
 
   app.name = 'RPAccessSearch'
   app.identifier = 'com.your_domain_here.rpaccesssearch'
+
+  # example of how you would do it with .env and motion vars
+  # set usable env var
+  # app.devlopment do
+    # Dotenv.overload(".env.development")
+  # end
+
+  # app.release do
+    # Dotenv.overload(".env.release")
+  # end
+    # app.env['API_HOST'] = ENV['API_HOST']
+
+  # if ENV['RM_ENV'] == 'development'
+  # elsif ENV['RM_ENV'] == 'adhoc'
+  # elsif ENV['RM_ENV'] == 'release'
+  # end
 
   app.short_version = '0.1.0'
   # Get version from git
