@@ -3,8 +3,8 @@ class HomeScreen < PM::Screen
   stylesheet HomeScreenStylesheet
 
   def on_load
-    set_nav_bar_button :left, system_item: :camera, action: :nav_left_button
-    set_nav_bar_button :right, title: "Right", action: :nav_right_button
+    set_nav_bar_button :left, title: "Menu", action: :show_menu
+    set_nav_bar_button :right, title: "Right", action: :show_menu
 
     @hello_world = append!(UILabel, :hello_world)
   end

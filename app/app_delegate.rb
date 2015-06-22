@@ -3,7 +3,11 @@ class AppDelegate < PM::Delegate
   status_bar true, animation: :fade
 
   def on_load(app, options)
-    open HomeScreen.new(nav_bar: true)
+    @menu = open MenuDrawer
+  end
+
+  def show_menu
+    @menu.show :left
   end
 
   # Remove this if you are only supporting portrait
@@ -13,3 +17,5 @@ class AppDelegate < PM::Delegate
     device.orientation = new_orientation
   end
 end
+
+
