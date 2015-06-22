@@ -1,12 +1,16 @@
 class HomeScreen < PM::Screen
-  title "Your title here"
+  title "Home"
   stylesheet HomeScreenStylesheet
 
   def on_load
     set_nav_bar_button :left, title: "Menu", action: :show_menu
-    set_nav_bar_button :right, title: "Right", action: :show_menu
+    # set_nav_bar_button :right, title: "Right", action: :show_menu
 
     @hello_world = append!(UILabel, :hello_world)
+  end
+
+  def show_menu
+    app_delegate.show_menu
   end
 
   def nav_left_button
