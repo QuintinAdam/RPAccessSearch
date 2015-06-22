@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "rake"
 gem "dotenv"
 gem "motion-env"
+# gem "motion-config-vars"
 
 gem "motion-cocoapods"
 gem "redpotion"
