@@ -49,6 +49,7 @@ GEM
       netrc (= 0.7.8)
     cocoapods-try (0.4.5)
     colored (1.2)
+    dotenv (2.0.2)
     escape (0.0.4)
     fuzzy_match (2.0.4)
     i18n (0.7.0)
@@ -61,6 +62,7 @@ GEM
       motion-cocoapods (>= 1.4.0)
     motion-cocoapods (1.7.1)
       cocoapods (>= 0.34)
+    motion-env (0.0.4)
     motion-map (0.0.4)
     motion-require (0.2.0)
     motion_print (1.1.2)
@@ -93,9 +95,11 @@ DEPENDENCIES
   ProMotion-push (~> 0.2)
   afmotion
   bubble-wrap
+  dotenv
   motion-awesome
   motion-blitz
   motion-cocoapods
+  motion-env
   newclear
   rake
   redpotion

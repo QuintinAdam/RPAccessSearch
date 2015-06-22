@@ -5,6 +5,7 @@ require 'motion/project/template/ios'
 require 'bundler'
 Bundler.require
 
+Dotenv.load
 require 'bubble-wrap'
 require 'motion-map'
 

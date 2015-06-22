@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
 gem "rake"
+gem "dotenv"
+gem "motion-env"
+
 gem "motion-cocoapods"
 gem "redpotion"
 gem "afmotion" # Networking
