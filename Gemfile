@@ -23,3 +23,5 @@ gem "bubble-wrap"
 
 # Easy HUD with SVProgressHUD
 gem 'motion-blitz'
+#font awesome
+gem 'motion-awesome'

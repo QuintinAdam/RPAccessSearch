@@ -6,6 +6,7 @@ require 'bundler'
 Bundler.require
 
 require 'bubble-wrap'
+require 'motion-map'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings
@@ -35,7 +36,7 @@ Motion::Project::App.setup do |app|
 
   app.files += Dir.glob(File.join(app.project_dir, 'lib/**/*.rb'))
 
-  # app.fonts = ['Oswald-Regular.ttf', 'FontAwesome.otf'] # These go in /resources
+  app.fonts = ['fontawesome-webfont.ttf'] # These go in /resources
   # Or use all *.ttf fonts in the /resources/fonts directory:
   # app.fonts = Dir.glob("resources/fonts/*.ttf").map{|font| "fonts/#{font.split('/').last}"}
   # app.frameworks += %w(QuartzCore CoreGraphics MediaPlayer MessageUI CoreData)

@@ -1,13 +1,46 @@
 class NavigationScreen < ProMotion::TableScreen
 
+  title "Menu"
+
   def table_data
     [{
       title: nil,
-      cells: [{},{
-        title: 'OVERWRITE THIS METHOD',
-        action: :swap_center_controller,
-        arguments: HomeScreen.new(nav_bar: true)
-      }]
+      cells: [
+        {
+          title: 'Home',
+          action: :swap_center_controller,
+          arguments: HomeScreen.new(nav_bar: true)
+        },
+        {
+          title: 'Favorite Deals'
+        },
+        {
+          title: 'Default Settings',
+          height: 20,
+          properties: {
+            background_color: RubyMotionQuery::Color.tint
+          }#,
+          # image: {
+          #   image: "any logo",
+          # }
+        },
+        {
+          title: 'Distance From Me'
+        },
+        {
+          title: 'Mobile Offers Only'
+        },
+        {
+          title: 'Account',
+          height: 20,
+          properties: {
+            background_color: RubyMotionQuery::Color.tint
+          }
+        },
+        {
+          title: 'My Account'
+        },
+      ]
     }]
   end
 

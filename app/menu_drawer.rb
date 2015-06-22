@@ -5,7 +5,7 @@ class MenuDrawer < PM::Menu::Drawer
     self.to_show = [:pan_bezel, :pan_nav_bar]
     self.to_hide = :all
     self.transition_animation = :slide
-    self.max_left_width = 150
+    self.max_left_width = 250
     self.shadow = false
   end
 
