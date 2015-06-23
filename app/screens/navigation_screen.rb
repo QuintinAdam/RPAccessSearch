@@ -14,32 +14,25 @@ class NavigationScreen < ProMotion::TableScreen
         {
           title: 'Favorite Deals'
         },
-        {
-          title: 'Default Settings',
-          height: 20,
-          properties: {
-            background_color: RubyMotionQuery::Color.tint
-          }#,
-          # image: {
-          #   image: "any logo",
-          # }
-        },
+      ]
+    },
+    {
+      title: 'Default Settings',
+      cells: [
         {
           title: 'Distance From Me'
         },
         {
           title: 'Mobile Offers Only'
-        },
-        {
-          title: 'Account',
-          height: 20,
-          properties: {
-            background_color: RubyMotionQuery::Color.tint
-          }
-        },
+        }
+      ]
+    },
+    {
+      title: 'Account',
+      cells: [
         {
           title: 'My Account'
-        },
+        }
       ]
     }]
   end

@@ -23,7 +23,9 @@ gem "ProMotion-menu" # PM Side menu
 # gem "bubble-wrap"
 # replacing bubble wrap with sweet kit, sugarcube and motionkit
 gem 'motion-kit'
-gem 'sugarcube'
+gem 'sugarcube', require: ['sugarcube-ui', 'sugarcube-awesome', 'sugarcube-attributedstring', 'sugarcube-color']
+# sugarcube-constants
+# 'sugarcube-events'
 # , :require => [
 #   'sugarcube-ui',
 #   'sugarcube-events',
@@ -31,7 +33,7 @@ gem 'sugarcube'
 #   'sugarcube-568',
 #   'sugarcube-attributedstring',
 # ]
-gem 'sweet-kit'
+# gem 'sweet-kit'
 
 
 # Screenshot acceptance comparison tool
@@ -40,4 +42,4 @@ gem 'sweet-kit'
 # Easy HUD with SVProgressHUD
 # gem 'motion-blitz'
 #font awesome
-gem 'motion-awesome'
+# gem 'motion-awesome'
