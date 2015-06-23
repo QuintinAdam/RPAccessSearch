@@ -9,7 +9,6 @@ Dotenv.load
 # override vars
 Dotenv.overload(".env.local")
 
-require 'bubble-wrap'
 require 'motion-map'
 
 Motion::Project::App.setup do |app|

@@ -20,12 +20,24 @@ gem "ProMotion-map", "~> 0.3"  # PM::MapScreen
 # gem "ProMotion-iap" # PM In-app purchases
 gem "ProMotion-menu" # PM Side menu
 
-gem "bubble-wrap"
+# gem "bubble-wrap"
+# replacing bubble wrap with sweet kit, sugarcube and motionkit
+gem 'motion-kit'
+gem 'sugarcube'
+# , :require => [
+#   'sugarcube-ui',
+#   'sugarcube-events',
+#   'sugarcube-gestures',
+#   'sugarcube-568',
+#   'sugarcube-attributedstring',
+# ]
+gem 'sweet-kit'
+
 
 # Screenshot acceptance comparison tool
 # gem "motion-juxtapose", "~> 0.1"
 
 # Easy HUD with SVProgressHUD
-gem 'motion-blitz'
+# gem 'motion-blitz'
 #font awesome
 gem 'motion-awesome'
