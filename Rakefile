@@ -70,6 +70,7 @@ Motion::Project::App.setup do |app|
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
     pod "FontasticIcons"
+    pod 'AFNetworking'
   end
 
   app.development do

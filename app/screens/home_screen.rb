@@ -1,25 +1,26 @@
 class HomeScreen < PM::TableScreen
   title "Access Search"
-  # stylesheet HomeScreenStylesheet
+  stylesheet HomeScreenStylesheet
   refreshable
   searchable placeholder: "Search offers"
   row_height :auto, estimated: 44
 
   def on_load
-    set_nav_bar_button :left, action: :show_menu, image: FIFontAwesomeIcon.reorderIcon.imageWithBounds([[0,0],[25,25]])#, , color: rmq.color.black
-    set_nav_bar_button :right, action: :nav_right_button, image: FIFontAwesomeIcon.mapMarkerIcon.imageWithBounds([[0,0],[25,25]])#, , color: rmq.color.black
+    # set_nav_bar_button :left, action: :show_menu, title: 'hi'
+    set_nav_bar_button :left, action: :show_menu, image: FIFontAwesomeIcon.reorderIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)#, , color: rmq.color.black
+    set_nav_bar_button :right, action: :nav_right_button, image: FIFontAwesomeIcon.mapMarkerIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)#, , color: rmq.color.black
     @offers = []
     load_async
   end
 
   def table_data
       [{
-        cells: @offers.map do |task|
+        cells: @offers.map do |offer|
           {
-            title: task.title,
-            subtitle: task.description,
-            action: :edit_task,
-            arguments: { task: task }
+            title: offer.title,
+            subtitle: offer.description,
+            action: :show_offer,
+            arguments: { offer: offer }
           }
         end
       }]
@@ -45,5 +46,9 @@ class HomeScreen < PM::TableScreen
       stop_refreshing
       update_table_data
     end
+  end
+
+  def show_offer(offer)
+    open ShowOfferScreen.new({ offer: offer })
   end
 end
