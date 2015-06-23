@@ -42,4 +42,4 @@ gem 'sugarcube', require: ['sugarcube-ui', 'sugarcube-awesome', 'sugarcube-attri
 # Easy HUD with SVProgressHUD
 # gem 'motion-blitz'
 #font awesome
-# gem 'motion-awesome'
+gem 'motion-awesome'
