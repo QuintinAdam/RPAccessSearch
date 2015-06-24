@@ -29,6 +29,7 @@ Motion::Project::App.setup do |app|
 
   # set all the vars that you want to use in the app here
   app.env['API_HOST'] = ENV['API_HOST']
+  app.env['ACCESS_TOKEN'] = ENV['ACCESS_TOKEN']
 
   if ENV['RM_ENV'] == 'development'
   elsif ENV['RM_ENV'] == 'adhoc'
@@ -70,7 +71,7 @@ Motion::Project::App.setup do |app|
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
     pod "FontasticIcons"
-    pod 'AFNetworking'
+    # pod 'AFNetworking'
   end
 
   app.development do
