@@ -43,3 +43,4 @@ gem 'sugarcube', require: ['sugarcube-ui', 'sugarcube-awesome', 'sugarcube-attri
 # gem 'motion-blitz'
 #font awesome
 gem 'motion-awesome'
+gem 'motion-access', path: '../motion-access'

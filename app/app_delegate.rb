@@ -20,4 +20,10 @@ class AppDelegate < PM::Delegate
   end
 end
 
+MotionAccess::Configuration.configure do |config|
+  config.access_token = ENV['ACCESS_TOKEN']
+  config.format = "json"
+  config.api_environment = "demo"
+  config.api_version = "v1"
+end
 

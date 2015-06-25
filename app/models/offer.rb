@@ -9,12 +9,17 @@ class Offer
       header "member_key", 'guest'
       response_serializer :json
     end
-    connection.get("?", options) do |result|
+    result = connection.get("?", options) do |result|
       if result.success?
-        mp result.operation
-        result
+        # mp result.operation.methods
+        mp result.inspect
+        result.object.each do |x|
+          mp 'xxxxxxxxxxxxx'
+
+          x.inspect
+        end
       elsif result.failure?
-        p result.error.localizedDescription
+        # p result.error.localizedDescription
       end
     end
   end
@@ -22,6 +27,8 @@ class Offer
   def self.all
     @offers = search_offers
     mp @offers
+    # mp @offers.operation.first
+    # mp @offers['title']
     # [
     #   Task.new("Do the dishes", "Get dish washing liquid"),
     #   Task.new("Hang out the washing", "We need some more pegs"),

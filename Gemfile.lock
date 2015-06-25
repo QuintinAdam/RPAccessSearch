@@ -1,3 +1,10 @@
+PATH
+  remote: ../motion-access
+  specs:
+    motion-access (1.2.3)
+      afmotion
+      motion-cocoapods
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -96,6 +103,7 @@ DEPENDENCIES
   ProMotion-push (~> 0.2)
   afmotion
   dotenv
+  motion-access!
   motion-awesome
   motion-cocoapods
   motion-env
