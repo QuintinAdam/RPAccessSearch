@@ -5,6 +5,7 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, action: :show_menu, image: FIFontAwesomeIcon.reorderIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)
     set_nav_bar_button :right, action: :nav_right_button, image: FIFontAwesomeIcon.mapMarkerIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)
+    find_offers
   end
 
   def show_menu
@@ -16,17 +17,19 @@ class HomeScreen < PM::Screen
   end
 
   def find_offers
-    MotionAccess::Offer.search do |response|
+    @offers = MotionAccess::Offer.search do |response|
       if response.success?
         offers = response.data
-        puts offers
-        open app_delegate.ListScreen(offers) if offers.length > 0
-        offers.each do |offer|
-          mp "offer title: #{offer.title}"
-        end
+        # puts offers
+        # # open app_delegate.ListScreen(offers) if offers.length > 0
+        # offers.each do |offer|
+        #   mp "offer title: #{offer.title}"
+        # end
+        # offers
       else
         mp response.error.message
       end
     end
   end
+  mp "offers: #{@offers}"
 end
