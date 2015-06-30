@@ -5,6 +5,10 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, action: :show_menu, image: FIFontAwesomeIcon.reorderIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)
     set_nav_bar_button :right, action: :nav_right_button, image: FIFontAwesomeIcon.mapMarkerIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)
+
+    @layout = HomeLayout.new
+    self.view = @layout.view
+    @submit_button = @layout.submit_button
     find_offers
   end
 
